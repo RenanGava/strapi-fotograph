@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts",
+  "info": {
+    "singularName": "post",
+    "pluralName": "posts",
+    "displayName": "Post"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "page_content": {
+      "type": "component",
+      "component": "postagens.post-events",
+      "repeatable": false
+    }
+  }
+}

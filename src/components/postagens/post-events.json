@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_postagens_post_events",
+  "info": {
+    "displayName": "PostEvents",
+    "icon": "layout"
+  },
+  "options": {},
+  "attributes": {
+    "Main": {
+      "type": "component",
+      "component": "postagens.main",
+      "repeatable": false,
+      "required": true
+    },
+    "fotos": {
+      "type": "component",
+      "component": "postagens.image-colection",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

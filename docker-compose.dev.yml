@@ -1,9 +1,9 @@
 services:
   strapi:
-    container_name: strapi
+    container_name: fotographDB_strapi
     build:
-      context: .docker/strapi
-      dockerfile: Dockerfile.dev
+      context: .
+      dockerfile: .docker/strapi/Dockerfile.dev
     image: strapi:latest
     restart: unless-stopped
     env_file: .env  # All variables from .env are injected into the container
@@ -19,11 +19,11 @@ services:
     networks:
       - strapi
     depends_on:
-      strapiDB:
+      fotographDB:
         condition: service_healthy
 
-  strapiDB:
-    container_name: strapiDB
+  fotographDB:
+    container_name: fotographDB
     # platform: linux/amd64  # Uncomment if you encounter platform errors on Apple Silicon
     restart: unless-stopped
     image: postgres:16-alpine

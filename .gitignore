@@ -115,6 +115,10 @@ yarn-error.log
 # Tests
 ############################
 
+############################
+# Extension Documentation
+############################
+src/extensions/documentation
 coverage
 
 ############################

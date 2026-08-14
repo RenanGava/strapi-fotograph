@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_postagens_image_colections",
+  "info": {
+    "displayName": "ImageColection",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "descricao": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_postagens_mains",
+  "info": {
+    "displayName": "Main",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "titulo": {
+      "type": "string",
+      "required": true
+    },
+    "sub_titulo": {
+      "type": "string",
+      "required": true
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "descricao": {
+      "type": "richtext"
+    }
+  },
+  "config": {}
+}

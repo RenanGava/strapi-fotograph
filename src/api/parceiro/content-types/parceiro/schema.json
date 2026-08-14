@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "parceiros",
+  "info": {
+    "singularName": "parceiro",
+    "pluralName": "parceiros",
+    "displayName": "Parceiro"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Tipo": {
+      "type": "string"
+    }
+  }
+}

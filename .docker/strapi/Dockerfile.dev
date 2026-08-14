@@ -29,9 +29,13 @@ RUN yarn install --frozen-lockfile
 
 ENV PATH=/opt/app/node_modules/.bin:$PATH
 
-COPY . .
+COPY --chown=node:node . .
 
+# RUN chown -R node:node /opt/app
 USER node
+
+
+RUN yarn build
 
 EXPOSE 1337
 
