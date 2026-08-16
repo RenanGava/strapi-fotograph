@@ -11,8 +11,10 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Tipo": {
-      "type": "string"
+    "dados": {
+      "type": "component",
+      "component": "postagens.main",
+      "repeatable": false
     }
   }
 }

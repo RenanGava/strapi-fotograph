@@ -15,6 +15,12 @@
       "type": "component",
       "component": "postagens.post-events",
       "repeatable": false
+    },
+    "categoria": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::categoria.categoria",
+      "inversedBy": "posts"
     }
   }
 }

@@ -1,0 +1,9 @@
+node_modules
+dist
+.strapi
+.tmp
+.git
+.gitignore
+Dockerfile*
+docker-compose*.yml
+*.log

@@ -38,6 +38,9 @@ const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Plugin =>
         deniedTypes: deniedExecutableTypes,
       },
     },
+  },
+  documentation: {
+    enabled: true,
   }
 });
 
