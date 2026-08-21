@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "footers",
+  "info": {
+    "singularName": "footer",
+    "pluralName": "footers",
+    "displayName": "footer"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "facebook_link": {
+      "type": "string"
+    },
+    "instagram_link": {
+      "type": "string"
+    },
+    "x_link": {
+      "type": "string"
+    }
+  }
+}

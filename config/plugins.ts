@@ -41,7 +41,17 @@ const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Plugin =>
   },
   documentation: {
     enabled: true,
-  }
+  },
+  // 'image-optimizer': {
+  //   enabled: true,
+  //   config: {
+  //     defaultChoice: 'original',
+  //     defaultMode: 'compress',
+  //     webpQuality: 82,
+  //     jpegQuality: 80,
+  //     pngCompressionLevel: 9,
+  //   },
+  // },
 });
 
 export default config;
