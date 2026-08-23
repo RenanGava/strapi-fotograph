@@ -11,16 +11,26 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "page_content": {
-      "type": "component",
-      "component": "postagens.post-events",
-      "repeatable": false
-    },
     "categoria": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::categoria.categoria",
       "inversedBy": "posts"
+    },
+    "page_content": {
+      "type": "component",
+      "component": "postagens.post-events",
+      "repeatable": false
+    },
+    "fotos": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }

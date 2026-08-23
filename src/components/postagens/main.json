@@ -23,7 +23,9 @@
       ]
     },
     "descricao": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true,
+      "maxLength": 1000
     }
   },
   "config": {}
