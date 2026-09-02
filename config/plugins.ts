@@ -42,16 +42,28 @@ const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Plugin =>
   documentation: {
     enabled: true,
   },
-  // 'image-optimizer': {
-  //   enabled: true,
-  //   config: {
-  //     defaultChoice: 'original',
-  //     defaultMode: 'compress',
-  //     webpQuality: 82,
-  //     jpegQuality: 80,
-  //     pngCompressionLevel: 9,
-  //   },
-  // },
+  email: {
+    config: {
+      provider: 'nodemailer',
+      providerOptions: {
+        host: 'smtp.gmail.com',
+        port: 465,
+        secure: true,
+        auth: {
+          type: 'OAuth2',
+          user: env('SMTP_USER'),
+          clientId: env('OAUTH_CLIENT_ID'),
+          clientSecret: env('OAUTH_CLIENT_SECRET'),
+          refreshToken: env('OAUTH_REFRESH_TOKEN'),
+        },
+      },
+      settings: {
+        defaultFrom: env('SMTP_USER'),
+        defaultReplyTo: env('SMTP_USER'),
+      },
+    },
+  }
+  
 });
 
 export default config;
