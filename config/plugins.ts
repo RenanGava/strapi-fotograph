@@ -47,7 +47,7 @@ const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Plugin =>
       provider: 'nodemailer',
       providerOptions: {
         host: 'smtp.gmail.com',
-        port: 465,
+        port: 465, // se for 587 secure false
         secure: true,
         auth: {
           type: 'OAuth2',
