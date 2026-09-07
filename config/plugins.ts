@@ -56,11 +56,7 @@ const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Plugin =>
           clientSecret: env('OAUTH_CLIENT_SECRET'),
           refreshToken: env('OAUTH_REFRESH_TOKEN'),
         },
-      },
-      settings: {
-        defaultFrom: env('SMTP_USER'),
-        defaultReplyTo: env('SMTP_USER'),
-      },
+      }
     },
   }
   

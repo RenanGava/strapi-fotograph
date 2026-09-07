@@ -63,4 +63,13 @@ Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/
 
 ---
 
+## Routes Custom
+
+POST api/send-email
+```json
+
+"from":"example@gmail.com",
+"text":"seu texto aqui"
+```
+
 <sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
