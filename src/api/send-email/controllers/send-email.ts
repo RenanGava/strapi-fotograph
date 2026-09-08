@@ -9,9 +9,6 @@ export default ({ strapi }: { strapi: Core.Strapi }) => ({
   send: async (ctx: Context) => {
     try {
       const emailData = ctx.request.body
-      
-      
-
       await strapi.plugin('email').service('email').send({
         ...emailData,
         to: process.env.SMTP_USER,

@@ -67,9 +67,59 @@ Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/
 
 POST api/send-email
 ```json
-
 "from":"example@gmail.com",
 "text":"seu texto aqui"
 ```
+
+## Config Docker Compose With Certbot
+
+
+## Passo 1
+### Gerar os Certificados
+```bash
+    docker compose run --rm certbot certonly \
+    --webroot \
+    -w /var/www/certbot \
+    -d seu-dominio.com.br \
+    -d www.seu-dominio.com.br
+```
+
+## Passo 2
+### Conferir se a syntaxe esta correta
+```bash
+    docker compose exec nginx nginx -t
+```
+## Passo 3
+### Rodar o Comando para Restartar o Servico
+
+```bash
+    docker compose exec nginx nginx -s reload
+    ou
+    docker compose restart nginx
+```
+
+
+# renovar os certificados
+### Renovacao Real
+
+```shell
+    docker compose certbot run --rm certbot renew
+```
+
+### Testar antes da Renovacao Real
+
+```bash
+    docker compose certbot run --rm certbot renew --dry-run
+```
+
+# Agendar um Cron Com o Comando de Renovacao do Certificado
+### rode o crontab
+```bash
+    crontab -e
+    depois cole dentro do arquivo
+    0 3 * * * cd /caminho/do/projeto && docker compose run --rm NOME_CONTAINER_CERTBOT renew && docker compose exec NOME_CONTAINER_NGINX nginx -s reload
+
+```
+
 
 <sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>

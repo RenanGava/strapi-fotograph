@@ -57,7 +57,6 @@ COPY --from=build /opt/app ./
 
 ENV PATH=/opt/app/node_modules/.bin:$PATH
 
-USER node
 
 EXPOSE 1337
 
